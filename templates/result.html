@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Stock Analysis Result</title>
+</head>
+<body>
+    <h1>Stock Analysis Result</h1>
+    <p>Positive Return Stocks for {{ input_date }}:</p>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Ticker Symbol</th>
+                <th>Return Percentage</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for stock in stocks %}
+                <tr>
+                    <td>{{ stock[0] }}</td>
+                    <td>{{ stock[1] }}%</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
